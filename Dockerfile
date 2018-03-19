@@ -22,4 +22,6 @@ RUN set -ex \
 RUN apt-get purge -y curl \
   && apt-get autoremove -y \
   && apt-get clean \
+  && rm -rf ~/.cache/pip/ \
+  && rm -rf ~/.pyenv/ \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* \
