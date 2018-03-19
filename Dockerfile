@@ -15,6 +15,8 @@ RUN set -ex \
   && git clone https://github.com/tagomoris/xbuild.git /usr/local/xbuild \
   && /usr/local/xbuild/python-install -f $PYTHON_35_VERSION /usr/local/python-3.5 \
   && /usr/local/xbuild/python-install -f $PYTHON_36_VERSION /usr/local/python-3.6 \
+  && /usr/local/python-3.5/bin/pip3 install wheel --upgrade \
+  && /usr/local/python-3.6/bin/pip3 install wheel --upgrade \
   && rm -rf /usr/local/xbuild
 
 RUN apt-get purge -y curl \
