@@ -1,11 +1,11 @@
-## Dockerfile for pyemoji
+## Dockerfile for emojilib
 
-:whale: Dockerfile for pyemoji
+:whale: Dockerfile for emojilib
 
 ## Build
 
 ```
-$ docker build -t docker-pyemoji .
+$ docker build -t docker-emojilib .
 ```
 
 ## License
