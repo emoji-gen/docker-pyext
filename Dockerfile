@@ -4,8 +4,8 @@ ENV PYTHON_35_VERSION 3.5.5
 ENV PYTHON_36_VERSION 3.6.4
 
 RUN set -ex \
-  && apt-get update \
-  && apt-get install -y --no-install-recommends \
+  && apt-get -qq update \
+  && apt-get -qq install -y --no-install-recommends \
     git gcc g++ make cmake ruby python \
     libyaml-dev zlib1g-dev libssl-dev libbz2-dev libreadline-dev \
     libfontconfig1-dev libx11-dev libxcomposite-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
@@ -21,9 +21,9 @@ RUN set -ex \
   && gem install --no-document gemfury \
   \
   && rm -rf /usr/local/xbuild \
-  && apt-get purge -y curl \
-  && apt-get autoremove -y \
-  && apt-get clean \
+  && apt-get -qq purge -y curl \
+  && apt-get -qq autoremove -y \
+  && apt-get -qq clean \
   && rm -rf ~/.cache/pip/ \
   && rm -rf ~/.pyenv/ \
   && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
