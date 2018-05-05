@@ -9,4 +9,4 @@ $ docker build -t docker-emojilib .
 ```
 
 ## License
-MIT &copy; Emoji Generator
+MIT &copy; [Emoji Generator](https://emoji-gen.ninja)
