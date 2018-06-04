@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 ENV PYTHON_35_VERSION 3.5.5
-ENV PYTHON_36_VERSION 3.6.4
+ENV PYTHON_36_VERSION 3.6.5
 
 RUN set -ex \
   && apt-get -qq update \
