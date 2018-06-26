@@ -7,7 +7,7 @@
 ## Build
 
 ```
-$ docker build -t docker-emojilib .
+$ docker build -t emojigen/docker-emojilib .
 ```
 
 ## License
