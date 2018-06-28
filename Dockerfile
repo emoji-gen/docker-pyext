@@ -3,7 +3,7 @@ FROM debian:stretch-slim
 RUN ["/bin/bash", "-c", "\
   set -eux -o pipefail \
     && export PYTHON_35_VERSION=3.5.5 \
-    && export PYTHON_36_VERSION=3.6.6 \
+    && export PYTHON_36_VERSION=3.6.5 \
     && export PYTHON_37_VERSION=3.7.0 \
     \
     && apt-get -qq update \
