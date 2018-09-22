@@ -1,5 +1,8 @@
 FROM debian:stretch-slim
 
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
+
 RUN ["/bin/bash", "-c", "\
   set -eux -o pipefail \
     && export PYTHON_35_VERSION=3.5.5 \
