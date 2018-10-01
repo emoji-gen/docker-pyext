@@ -14,7 +14,7 @@ RUN ["/bin/bash", "-c", "\
       git gcc g++ make cmake ruby python \
       libyaml-dev zlib1g-dev libssl-dev libbz2-dev libreadline-dev libffi-dev \
       libfontconfig1-dev libx11-dev libxcomposite-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev \
-      curl ca-certificates \
+      curl ca-certificates unzip patchelf \
     \
     && mkdir -p /usr/local \
     && git clone https://github.com/tagomoris/xbuild.git /usr/local/xbuild \
