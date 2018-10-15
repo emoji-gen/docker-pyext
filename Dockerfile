@@ -25,9 +25,6 @@ RUN ["/bin/bash", "-c", "\
     && /usr/local/python-3.5/bin/pip3 install pip --upgrade \
     && /usr/local/python-3.6/bin/pip3 install pip --upgrade \
     && /usr/local/python-3.7/bin/pip3 install pip --upgrade \
-    && /usr/local/python-3.5/bin/pip3 install wheel --upgrade \
-    && /usr/local/python-3.6/bin/pip3 install wheel --upgrade \
-    && /usr/local/python-3.7/bin/pip3 install wheel --upgrade \
     && gem install --no-document gemfury \
     \
     && rm -rf /usr/local/xbuild \
