@@ -1,13 +1,13 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
 RUN ["/bin/bash", "-c", "\
   set -eux -o pipefail \
-    && export PYTHON_35_VERSION=3.5.6 \
-    && export PYTHON_36_VERSION=3.6.7 \
-    && export PYTHON_37_VERSION=3.7.1 \
+    && export PYTHON_36_VERSION=3.6.10 \
+    && export PYTHON_37_VERSION=3.7.6 \
+    && export PYTHON_38_VERSION=3.8.2 \
     \
     && apt-get -qq update \
     && apt-get -qq install -y --no-install-recommends \
@@ -18,13 +18,13 @@ RUN ["/bin/bash", "-c", "\
     \
     && mkdir -p /usr/local \
     && git clone https://github.com/tagomoris/xbuild.git /usr/local/xbuild \
-    && /usr/local/xbuild/python-install -f $PYTHON_35_VERSION /usr/local/python-3.5 \
     && /usr/local/xbuild/python-install -f $PYTHON_36_VERSION /usr/local/python-3.6 \
     && /usr/local/xbuild/python-install -f $PYTHON_37_VERSION /usr/local/python-3.7 \
+    && /usr/local/xbuild/python-install -f $PYTHON_38_VERSION /usr/local/python-3.8 \
     \
-    && /usr/local/python-3.5/bin/pip3 install pip --upgrade \
     && /usr/local/python-3.6/bin/pip3 install pip --upgrade \
     && /usr/local/python-3.7/bin/pip3 install pip --upgrade \
+    && /usr/local/python-3.8/bin/pip3 install pip --upgrade \
     && gem install --no-document gemfury \
     \
     && rm -rf /usr/local/xbuild \
