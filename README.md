@@ -20,7 +20,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 ## Build
 
 ```
-$ docker build -t emojigen/docker-emojilib .
+$ docker build -t emojigen/pyext .
 ```
 
 ## License
