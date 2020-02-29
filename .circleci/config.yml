@@ -13,9 +13,9 @@ jobs:
           version: 18.09.3
           docker_layer_caching: false
       - run:
-          name: Install Bash
+          name: Install packages
           command: |
-            apk add -U -q --no-progress git bash
+            apk add -U -q --no-progress git bash openssh-client
       - checkout
       - run:
           name: Build
