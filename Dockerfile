@@ -28,7 +28,6 @@ RUN ["/bin/bash", "-c", "\
     && gem install --no-document gemfury \
     \
     && rm -rf /usr/local/xbuild \
-    && apt-get -qq purge -y curl \
     && apt-get -qq autoremove -y \
     && apt-get -qq clean \
     && rm -rf ~/.cache/pip/ \
